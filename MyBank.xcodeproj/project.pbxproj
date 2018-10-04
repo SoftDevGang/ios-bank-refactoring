@@ -14,6 +14,11 @@
 		0BF10A0D21657B0B00695360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF10A0B21657B0B00695360 /* LaunchScreen.storyboard */; };
 		0BF10A1821657B0B00695360 /* MyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A1721657B0B00695360 /* MyBankTests.swift */; };
 		0BF10A2321657B0B00695360 /* MyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A2221657B0B00695360 /* MyBankUITests.swift */; };
+		0BF10A3121657D1800695360 /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3021657D1800695360 /* RootNavigationViewController.swift */; };
+		0BF10A3321657D9D00695360 /* SourceAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3221657D9D00695360 /* SourceAccountViewController.swift */; };
+		0BF10A3521657E9500695360 /* DestinationAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */; };
+		0BF10A372165852A00695360 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A362165852A00695360 /* AmountViewController.swift */; };
+		0BF10A3921658BAB00695360 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		0BF10A1E21657B0B00695360 /* MyBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF10A2221657B0B00695360 /* MyBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBankUITests.swift; sourceTree = "<group>"; };
 		0BF10A2421657B0B00695360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BF10A3021657D1800695360 /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
+		0BF10A3221657D9D00695360 /* SourceAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAccountViewController.swift; sourceTree = "<group>"; };
+		0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationAccountViewController.swift; sourceTree = "<group>"; };
+		0BF10A362165852A00695360 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
+		0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,11 @@
 				0BF10A0921657B0B00695360 /* Assets.xcassets */,
 				0BF10A0B21657B0B00695360 /* LaunchScreen.storyboard */,
 				0BF10A0E21657B0B00695360 /* Info.plist */,
+				0BF10A3021657D1800695360 /* RootNavigationViewController.swift */,
+				0BF10A3221657D9D00695360 /* SourceAccountViewController.swift */,
+				0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */,
+				0BF10A362165852A00695360 /* AmountViewController.swift */,
+				0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */,
 			);
 			path = MyBank;
 			sourceTree = "<group>";
@@ -256,8 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BF10A3921658BAB00695360 /* ConfirmationViewController.swift in Sources */,
+				0BF10A3521657E9500695360 /* DestinationAccountViewController.swift in Sources */,
+				0BF10A3121657D1800695360 /* RootNavigationViewController.swift in Sources */,
+				0BF10A372165852A00695360 /* AmountViewController.swift in Sources */,
 				0BF10A0521657B0900695360 /* ViewController.swift in Sources */,
 				0BF10A0321657B0900695360 /* AppDelegate.swift in Sources */,
+				0BF10A3321657D9D00695360 /* SourceAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
