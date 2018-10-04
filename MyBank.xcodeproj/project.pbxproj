@@ -19,6 +19,8 @@
 		0BF10A3521657E9500695360 /* DestinationAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */; };
 		0BF10A372165852A00695360 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A362165852A00695360 /* AmountViewController.swift */; };
 		0BF10A3921658BAB00695360 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */; };
+		0BF10A3B2165F43C00695360 /* AccountWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3A2165F43C00695360 /* AccountWebService.swift */; };
+		0BF10A3D2165F4F200695360 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3C2165F4F200695360 /* AccountType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationAccountViewController.swift; sourceTree = "<group>"; };
 		0BF10A362165852A00695360 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
 		0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		0BF10A3A2165F43C00695360 /* AccountWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWebService.swift; sourceTree = "<group>"; };
+		0BF10A3C2165F4F200695360 /* AccountType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		0BF10A0121657B0900695360 /* MyBank */ = {
 			isa = PBXGroup;
 			children = (
+				0BF10A3A2165F43C00695360 /* AccountWebService.swift */,
 				0BF10A0221657B0900695360 /* AppDelegate.swift */,
 				0BF10A0421657B0900695360 /* ViewController.swift */,
 				0BF10A0621657B0900695360 /* Main.storyboard */,
@@ -118,6 +123,7 @@
 				0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */,
 				0BF10A362165852A00695360 /* AmountViewController.swift */,
 				0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */,
+				0BF10A3C2165F4F200695360 /* AccountType.swift */,
 			);
 			path = MyBank;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 				0BF10A372165852A00695360 /* AmountViewController.swift in Sources */,
 				0BF10A0521657B0900695360 /* ViewController.swift in Sources */,
 				0BF10A0321657B0900695360 /* AppDelegate.swift in Sources */,
+				0BF10A3B2165F43C00695360 /* AccountWebService.swift in Sources */,
+				0BF10A3D2165F4F200695360 /* AccountType.swift in Sources */,
 				0BF10A3321657D9D00695360 /* SourceAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

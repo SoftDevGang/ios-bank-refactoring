@@ -14,7 +14,7 @@ class SourceAccountViewController : UIViewController, UIPickerViewDataSource, UI
     @IBAction func next(_ sender: UIButton) {
         
         let root = navigationController as! RootNavigationViewController
-        root.sourceAccount = getKnownAccounts()[sourceAccount.selectedRow(inComponent: 0)]
+        root.sourceAccount = getOwnAccounts()[sourceAccount.selectedRow(inComponent: 0)]
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "DestinationAccountViewController")
@@ -32,14 +32,14 @@ class SourceAccountViewController : UIViewController, UIPickerViewDataSource, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 4
+        return getOwnAccounts().count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.getKnownAccounts()[row]
+        return self.getOwnAccounts()[row]
     }
     
-    func getKnownAccounts() -> [String] {
-        return ["current account", "savings", "shared account", "stocks"]
+    func getOwnAccounts() -> [String] {
+        return AccountWebService().getOwnAccounts()
     }
 }

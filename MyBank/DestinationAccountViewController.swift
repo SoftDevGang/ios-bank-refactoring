@@ -41,6 +41,6 @@ class DestinationAccountViewController : UIViewController, UIPickerViewDataSourc
     }
     
     func getKnownAccounts() -> [String] {
-        return ["mom", "darling", "landlord", "babysitter", "Freddy"]
+        return AccountWebService().getKnownAccounts()
     }
 }
