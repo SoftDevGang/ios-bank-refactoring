@@ -52,15 +52,54 @@ class AmountViewController : UIViewController, UITextFieldDelegate {
     }
     
     func getAccountBalance() -> Int {
-        return 200
+        let root = navigationController as! RootNavigationViewController
+        let account = root.sourceAccount
+        switch account {
+        case "current account":
+            return 300
+        case "savings":
+            return 400
+        case "shared account":
+            return 200
+        case "stocks":
+            return 300
+        default:
+            return 0
+        }
     }
     
     func getAccountCreditAllowed() -> Int {
-        return 10
+        let root = navigationController as! RootNavigationViewController
+        let account = root.sourceAccount
+        switch account {
+        case "current account":
+            return 50
+        case "savings":
+            return 0
+        case "shared account":
+            return 0
+        case "stocks":
+            return 0
+        default:
+            return 0
+        }
     }
     
     func getAccountType() -> AccountType {
-        return .CREDIT_FORBIDDEN
+        let root = navigationController as! RootNavigationViewController
+        let account = root.sourceAccount
+        switch account {
+        case "current account":
+            return .CREDIT_AUTHORIZED
+        case "savings":
+            return .CREDIT_FORBIDDEN
+        case "shared account":
+            return .CREDIT_FORBIDDEN
+        case "stocks":
+            return .CREDIT_FORBIDDEN
+        default:
+            return .CREDIT_FORBIDDEN
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
