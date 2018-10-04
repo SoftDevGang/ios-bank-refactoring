@@ -13,11 +13,14 @@ class SourceAccountViewController : UIViewController, UIPickerViewDataSource, UI
     
     @IBAction func next(_ sender: UIButton) {
         
-        let root = navigationController as! RootNavigationViewController
-        root.sourceAccount = getOwnAccounts()[sourceAccount.selectedRow(inComponent: 0)]
+        let transactionBuilder = TransactionBuilder()
+        
+        // business logic
+        transactionBuilder.sourceAccount = getOwnAccounts()[sourceAccount.selectedRow(inComponent: 0)]
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "DestinationAccountViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DestinationAccountViewController") as! DestinationAccountViewController
+        viewController.transactionBuilder = transactionBuilder
         navigationController?.pushViewController(viewController, animated: true)
     }
     

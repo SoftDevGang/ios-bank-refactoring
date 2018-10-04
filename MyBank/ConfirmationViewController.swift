@@ -12,12 +12,12 @@ class ConfirmationViewController : UIViewController {
     
     @IBOutlet weak var confirmation: UILabel!
     
+    var transactionBuilder: TransactionBuilder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let root = navigationController as! RootNavigationViewController
-        confirmation.text = "Transfert from \(root.sourceAccount!) to \(root.destinationAccount!) of \(root.amount!)"
+        confirmation.text = "Transfert from \(transactionBuilder.sourceAccount!) to \(transactionBuilder.destinationAccount!) of \(transactionBuilder.amount!)"
         
     }
 }

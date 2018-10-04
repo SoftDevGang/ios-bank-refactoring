@@ -13,12 +13,17 @@ class AmountViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
     
+    var transactionBuilder: TransactionBuilder!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         amount.delegate = self
     }
     
     @IBAction func next(_ sender: UIButton) {
+        
+        // is the actual messages ui or business
+        
         let value = amount.text!
         guard let valueAsInt = Int(value) else {
             errorMessage.text = "Amount must be a number"
@@ -43,29 +48,30 @@ class AmountViewController : UIViewController, UITextFieldDelegate {
             return
         }
         
-        let root = navigationController as! RootNavigationViewController
-        root.amount = valueAsInt
+        transactionBuilder.amount = valueAsInt
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ConfirmationViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ConfirmationViewController") as! ConfirmationViewController
+        viewController.transactionBuilder = transactionBuilder
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     func getAccountBalance() -> Int {
-        let root = navigationController as! RootNavigationViewController
-        let account = root.sourceAccount
+        // this logic belongs to the model, should be injected
+        let account = transactionBuilder.sourceAccount
         return AccountWebService().getBalance(account!)
     }
     
     func getAccountCreditAllowed() -> Int {
-        let root = navigationController as! RootNavigationViewController
-        let account = root.sourceAccount
+        // this logic belongs to the model, should be injected
+        let account = transactionBuilder.sourceAccount
         return AccountWebService().getAccountCreditAllowed(account!)
     }
     
     func getAccountType() -> AccountType {
-        let root = navigationController as! RootNavigationViewController
-        let account = root.sourceAccount
+        // this logic belongs to the model, should be injected
+        let account = transactionBuilder.sourceAccount
         return AccountWebService().getAccountType(account!)
     }
     

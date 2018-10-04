@@ -22,6 +22,17 @@ class MyBankTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        let app = XCUIApplication()
+//        app.pickerWheels["current account"].tap()
+//        let nextButton = app.buttons["Next"]
+//        nextButton.tap()
+//        app.pickerWheels["mom"].tap()
+//        nextButton.tap()
+//        app.textFields["amount"].tap()
+//        app.textFields["amount"].typeText("45\n")
+//        nextButton.tap()
+//        XCTAssertEqual(app.staticTexts["summary"].label, "Transfert from current account to mom of 45")
+//
     }
 
     func testPerformanceExample() {

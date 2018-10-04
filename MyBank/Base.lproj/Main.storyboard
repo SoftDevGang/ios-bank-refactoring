@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root Navigation View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="MVV-P9-6zV">
             <objects>
-                <navigationController storyboardIdentifier="RootNavigationViewController" id="yCH-mI-h8O" customClass="RootNavigationViewController" customModule="MyBank" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationViewController" id="yCH-mI-h8O" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rng-O5-IQl">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -148,6 +148,7 @@
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqU-7K-Pbf">
                                 <rect key="frame" x="132" y="390.5" width="111" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="errorMessage"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.01164490638" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

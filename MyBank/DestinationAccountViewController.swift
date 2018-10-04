@@ -10,6 +10,8 @@ import UIKit
 
 class DestinationAccountViewController : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var transactionBuilder: TransactionBuilder!
+    
     @IBOutlet weak var destinationAccount: UIPickerView!
     
     override func viewDidLoad() {
@@ -20,11 +22,14 @@ class DestinationAccountViewController : UIViewController, UIPickerViewDataSourc
     
     @IBAction func next(_ sender: UIButton) {
         
-        let root = navigationController as! RootNavigationViewController
-        root.destinationAccount = getKnownAccounts()[destinationAccount.selectedRow(inComponent: 0)]
+        
+        // business logic
+        transactionBuilder.destinationAccount = getKnownAccounts()[destinationAccount.selectedRow(inComponent: 0)]
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "AmountViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "AmountViewController") as! AmountViewController
+        viewController.transactionBuilder = transactionBuilder
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
     

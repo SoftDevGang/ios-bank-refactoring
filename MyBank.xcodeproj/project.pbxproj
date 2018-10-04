@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04950EDA2166664C009D3EF1 /* TransactionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04950ED92166664C009D3EF1 /* TransactionBuilder.swift */; };
 		0BF10A0321657B0900695360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A0221657B0900695360 /* AppDelegate.swift */; };
 		0BF10A0521657B0900695360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A0421657B0900695360 /* ViewController.swift */; };
 		0BF10A0821657B0900695360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF10A0621657B0900695360 /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		0BF10A0D21657B0B00695360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BF10A0B21657B0B00695360 /* LaunchScreen.storyboard */; };
 		0BF10A1821657B0B00695360 /* MyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A1721657B0B00695360 /* MyBankTests.swift */; };
 		0BF10A2321657B0B00695360 /* MyBankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A2221657B0B00695360 /* MyBankUITests.swift */; };
-		0BF10A3121657D1800695360 /* RootNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3021657D1800695360 /* RootNavigationViewController.swift */; };
 		0BF10A3321657D9D00695360 /* SourceAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3221657D9D00695360 /* SourceAccountViewController.swift */; };
 		0BF10A3521657E9500695360 /* DestinationAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */; };
 		0BF10A372165852A00695360 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10A362165852A00695360 /* AmountViewController.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04950ED92166664C009D3EF1 /* TransactionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionBuilder.swift; sourceTree = "<group>"; };
 		0BF109FF21657B0900695360 /* MyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF10A0221657B0900695360 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BF10A0421657B0900695360 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		0BF10A1E21657B0B00695360 /* MyBankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BF10A2221657B0B00695360 /* MyBankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBankUITests.swift; sourceTree = "<group>"; };
 		0BF10A2421657B0B00695360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BF10A3021657D1800695360 /* RootNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationViewController.swift; sourceTree = "<group>"; };
 		0BF10A3221657D9D00695360 /* SourceAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAccountViewController.swift; sourceTree = "<group>"; };
 		0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationAccountViewController.swift; sourceTree = "<group>"; };
 		0BF10A362165852A00695360 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
@@ -118,12 +118,12 @@
 				0BF10A0921657B0B00695360 /* Assets.xcassets */,
 				0BF10A0B21657B0B00695360 /* LaunchScreen.storyboard */,
 				0BF10A0E21657B0B00695360 /* Info.plist */,
-				0BF10A3021657D1800695360 /* RootNavigationViewController.swift */,
 				0BF10A3221657D9D00695360 /* SourceAccountViewController.swift */,
 				0BF10A3421657E9500695360 /* DestinationAccountViewController.swift */,
 				0BF10A362165852A00695360 /* AmountViewController.swift */,
 				0BF10A3821658BAB00695360 /* ConfirmationViewController.swift */,
 				0BF10A3C2165F4F200695360 /* AccountType.swift */,
+				04950ED92166664C009D3EF1 /* TransactionBuilder.swift */,
 			);
 			path = MyBank;
 			sourceTree = "<group>";
@@ -279,8 +279,8 @@
 			files = (
 				0BF10A3921658BAB00695360 /* ConfirmationViewController.swift in Sources */,
 				0BF10A3521657E9500695360 /* DestinationAccountViewController.swift in Sources */,
-				0BF10A3121657D1800695360 /* RootNavigationViewController.swift in Sources */,
 				0BF10A372165852A00695360 /* AmountViewController.swift in Sources */,
+				04950EDA2166664C009D3EF1 /* TransactionBuilder.swift in Sources */,
 				0BF10A0521657B0900695360 /* ViewController.swift in Sources */,
 				0BF10A0321657B0900695360 /* AppDelegate.swift in Sources */,
 				0BF10A3B2165F43C00695360 /* AccountWebService.swift in Sources */,

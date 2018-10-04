@@ -40,7 +40,17 @@ class MyBankUITests: XCTestCase {
         app.textFields["amount"].typeText("45\n")
         nextButton.tap()
         XCTAssertEqual(app.staticTexts["summary"].label, "Transfert from current account to mom of 45")
-        
     }
 
-}
+    func testErrorMessage() {
+        let app = XCUIApplication()
+        app.pickerWheels["current account"].tap()
+        let nextButton = app.buttons["Next"]
+        nextButton.tap()
+        app.pickerWheels["mom"].tap()
+        nextButton.tap()
+        app.textFields["amount"].tap()
+        app.textFields["amount"].typeText("XXX\n")
+        nextButton.tap()
+        XCTAssertEqual(app.staticTexts["errorMessage"].label, "Amount must be a number")
+    }}
