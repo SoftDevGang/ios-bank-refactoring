@@ -7,7 +7,13 @@
 //
 
 import UIKit
-
+class AmountError {
+    var message: String
+    init(_ message: String) {
+        self.message = message
+    }
+    
+}
 class AmountViewController : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var amount: UITextField!
@@ -20,31 +26,37 @@ class AmountViewController : UIViewController, UITextFieldDelegate {
         amount.delegate = self
     }
     
+    func showError(message: String)-> AmountError {
+        errorMessage.text = message
+        errorMessage.isHidden = false
+        return AmountError(message)
+    }
     @IBAction func next(_ sender: UIButton) {
         
         // is the actual messages ui or business
         
-        let value = amount.text!
+        let input = amount.text!
+        let value = input
+        var amountError: AmountError?
         guard let valueAsInt = Int(value) else {
-            errorMessage.text = "Amount must be a number"
-            errorMessage.isHidden = false
+             amountError = showError(message: "Amount must be a number")
             return
         }
         if (valueAsInt < 0) {
-            errorMessage.text = "Amount must be greater than zero"
-            errorMessage.isHidden = false
+            amountError = showError(message: "Amount must be greater than zero")
             return
         }
         
         if (self.getAccountType() == .CREDIT_FORBIDDEN && valueAsInt > self.getAccountBalance()) {
-            errorMessage.text = "Amount cannot be greater than \(self.getAccountBalance())"
-            errorMessage.isHidden = false
+            amountError = showError(message: "Amount cannot be greater than \(self.getAccountBalance())")
             return
         }
         
         if (self.getAccountType() == .CREDIT_AUTHORIZED && valueAsInt > self.getAccountBalance() + self.getAccountCreditAllowed()) {
-            errorMessage.text = "Amount cannot be greater than \(self.getAccountBalance() + self.getAccountCreditAllowed())"
-            errorMessage.isHidden = false
+            amountError = showError(message: "Amount cannot be greater than \(self.getAccountBalance() + self.getAccountCreditAllowed())")
+            return
+        }
+        if nil != amountError {
             return
         }
         
