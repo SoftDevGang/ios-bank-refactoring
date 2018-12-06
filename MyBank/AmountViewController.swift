@@ -31,16 +31,18 @@ class AmountViewController : UIViewController, UITextFieldDelegate {
             return
         }
         
-        if (self.getAccountType() == .CREDIT_FORBIDDEN && valueAsInt > self.getAccountBalance()) {
+        if (valueAsInt > self.getAccountBalance() && self.getAccountType() == .CREDIT_FORBIDDEN) {
             errorMessage.text = "Amount cannot be greater than \(self.getAccountBalance())"
             errorMessage.isHidden = false
             return
         }
         
-        if (self.getAccountType() == .CREDIT_AUTHORIZED && valueAsInt > self.getAccountBalance() + self.getAccountCreditAllowed()) {
-            errorMessage.text = "Amount cannot be greater than \(self.getAccountBalance() + self.getAccountCreditAllowed())"
-            errorMessage.isHidden = false
-            return
+        if (self.getAccountType() == .CREDIT_AUTHORIZED) {
+            if (valueAsInt > self.getAccountBalance() + self.getAccountCreditAllowed()) {
+                errorMessage.text = "Amount cannot be greater than \(self.getAccountBalance() + self.getAccountCreditAllowed())"
+                errorMessage.isHidden = false
+                return
+            }
         }
         
         let root = navigationController as! RootNavigationViewController
